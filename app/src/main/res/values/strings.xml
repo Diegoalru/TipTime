@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">Tip Time!</string>
+    <string name="cost_of_service">Cost of Service</string>
+    <string name="how_was_the_service">How was the service?</string>
+    <string name="amazing_service">Amazing (20%)</string>
+    <string name="good_service">Good (18%)</string>
+    <string name="okay_service">Okay (15%)</string>
+    <string name="round_up_tip">Round up tip?</string>
+    <string name="calculate">Calculate</string>
+    <string name="tip_amount">Tip Amount</string>
+    <string name="tip_amount_with_value">Tip Amount: %1$s</string>
+    <string name="error_0_as_tip_value">Please enter a greater value!</string>
+    <string name="error_number_format">Please enter a number</string>
+    <string name="error_something_went_wrong">Something went wrong!</string>
+    <string name="error_empty_cost">Please enter a number</string>
+</resources>

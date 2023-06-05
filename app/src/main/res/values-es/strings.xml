@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cost_of_service">Costo del Servicio</string>
+    <string name="how_was_the_service">¿Comó estuvo el servicio?</string>
+    <string name="amazing_service" >Increíble (20%)</string>
+    <string name="good_service" >Buena (18%)</string>
+    <string name="okay_service">Regular (15%)</string>
+    <string name="round_up_tip">¿Redondear la propina?</string>
+    <string name="calculate">Calcular</string>
+    <string name="tip_amount">Monto de la propina</string>
+    <string name="tip_amount_with_value">Monto de la propina: %1$s</string>
+    <string name="error_0_as_tip_value">¡Por favor ingrese un valor mayor!</string>
+    <string name="error_number_format">Ingrese un valor</string>
+    <string name="error_something_went_wrong">¡Ha ocurrido un error!</string>
+    <string name="error_empty_cost">Ingrese un valor</string>
+</resources>
