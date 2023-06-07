@@ -1,6 +1,10 @@
 package com.darssolutions.tiptime
 
+import android.content.Context
 import android.os.Bundle
+import android.view.KeyEvent
+import android.view.View
+import android.view.inputmethod.InputMethodManager
 import androidx.appcompat.app.AppCompatActivity
 import com.darssolutions.tiptime.databinding.ActivityMainBinding
 import com.google.android.material.snackbar.Snackbar
@@ -15,6 +19,10 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.costOfServiceEditText.setOnKeyListener { view, keyCode, _ ->
+            handleKeyEvent(view, keyCode)
+        }
+
         binding.calculateButton.setOnClickListener { calculateTip() }
     }
 
@@ -24,7 +32,7 @@ class MainActivity : AppCompatActivity() {
      */
     private fun calculateTip() {
         try {
-            val stringInTextFiled = binding.costOfService.text.toString()
+            val stringInTextFiled = binding.costOfServiceEditText.text.toString()
             val cost = stringInTextFiled.toDoubleOrNull()
 
             // Check if the cost is empty or 0
@@ -90,5 +98,21 @@ class MainActivity : AppCompatActivity() {
                 Snackbar.LENGTH_LONG
             ).show()
         }
+    }
+
+    /**
+     * Hide the keyboard when the user presses the Enter key.
+     * @param view The view that received the key event.
+     * @param keyCode The value in event.getKeyCode().
+     * @return true if the listener has consumed the event, false otherwise.
+     */
+    private fun handleKeyEvent(view: View, keyCode: Int): Boolean {
+        if (keyCode == KeyEvent.KEYCODE_ENTER) {
+            val inputMethodManager =
+                getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+            inputMethodManager.hideSoftInputFromWindow(view.windowToken, 0)
+            return true
+        }
+        return false
     }
 }
