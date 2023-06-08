@@ -54,6 +54,15 @@ class MainActivity : AppCompatActivity() {
                 return
             }
 
+            if (cost < 0.0) {
+                Snackbar.make(
+                    binding.root,
+                    getString(R.string.error_negative_cost),
+                    Snackbar.LENGTH_LONG
+                ).show()
+                return
+            }
+
             // Check which radio button is selected
             val tipPercentage = when (binding.tipOptions.checkedRadioButtonId) {
                 R.id.option_twenty_percent -> 0.20

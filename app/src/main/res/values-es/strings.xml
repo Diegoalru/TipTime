@@ -13,4 +13,5 @@
     <string name="error_number_format">Ingrese un valor</string>
     <string name="error_something_went_wrong">¡Ha ocurrido un error!</string>
     <string name="error_empty_cost">Ingrese un valor</string>
+    <string name="error_negative_cost">¡No, valores negativos</string>
 </resources>
